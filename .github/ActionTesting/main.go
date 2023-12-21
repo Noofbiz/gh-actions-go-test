@@ -148,7 +148,6 @@ func commitToPR() error {
 	}
 	pushBytes, _ := io.ReadAll(pushOutput)
 	if err = gitPush.Wait(); err != nil {
-		println("heya")
 		return errors.New("Git push returned error: " + string(pushBytes))
 	}
 	return nil
